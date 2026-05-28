@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO ═══ -->
+<title>PromptCerto — 50 Prompts de IA que Mudam sua Rotina</title>
+<meta name="description" content="50 prompts prontos para usar com ChatGPT, Claude e Gemini. Trabalho, finanças, estudos, redes sociais e vida pessoal. Acesso imediato. Garantia de 7 dias.">
+<meta name="keywords" content="prompts IA, ChatGPT, Claude, Gemini, inteligência artificial, ebook, produtividade, prompts prontos">
+<meta name="author" content="PromptCerto">
+<link rel="canonical" href="https://promptcerto.github.io/">
+
+<!-- ═══ OPEN GRAPH (WhatsApp, Instagram, Facebook) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PromptCerto — 50 Prompts que Mudam sua Rotina">
+<meta property="og:description" content="Pare de perder tempo com IA errada. 50 prompts testados prontos para usar agora. R$ 27 com garantia de 7 dias.">
+<meta property="og:url" content="https://promptcerto.github.io/">
+<meta property="og:image" content="https://promptcerto.github.io/og-image.png">
+<meta property="og:locale" content="pt_BR">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PromptCerto — 50 Prompts que Mudam sua Rotina">
+<meta name="twitter:description" content="Pare de perder tempo com IA errada. 50 prompts testados prontos para usar agora.">
+<meta name="twitter:image" content="https://promptcerto.github.io/og-image.png">
+
+<!-- ═══ FAVICON ═══ -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+
+<!-- ═══ FONTE ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════
+   VARIÁVEIS E RESET
+══════════════════════════════════════ */
+:root {
+  --verde:       #00E5A0;
+  --verde-esc:   #00B57D;
+  --preto:       #080808;
+  --c1:          #111111;
+  --c2:          #181818;
+  --c3:          #222222;
+  --c4:          #2C2C2C;
+  --texto:       #F0F0F0;
+  --suave:       #888888;
+  --amarelo:     #FFD94A;
+  --vermelho:    #FF4E4E;
+  --azul:        #5BC8FF;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--preto);
+  color:var(--texto);
+  font-family:'Manrope',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* ══════════════════════════════════════
+   ANIMAÇÕES
+══════════════════════════════════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(0,229,160,.4)}50%{box-shadow:0 0 0 14px rgba(0,229,160,0)}}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.fu{animation:fadeUp .7s ease both}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}
+.d4{animation-delay:.46s}.d5{animation-delay:.58s}
+
+/* ══════════════════════════════════════
+   TICKER TOPO
+══════════════════════════════════════ */
+.ticker-wrap{background:var(--verde);overflow:hidden;padding:10px 0;white-space:nowrap}
+.ticker-inner{display:inline-block;animation:ticker 24s linear infinite}
+.ticker-inner span{
+  display:inline-block;padding:0 32px;
+  font-size:12px;font-weight:700;color:#000;letter-spacing:.5px
+}
+.ticker-inner span::after{content:'✦';margin-left:32px;opacity:.45}
+
+/* ══════════════════════════════════════
+   NAVEGAÇÃO
+══════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,8,8,.93);backdrop-filter:blur(20px);
+  border-bottom:1px solid #1a1a1a;
+  padding:15px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;color:#fff}
+.logo span{color:var(--verde)}
+.nav-btn{
+  background:var(--verde);color:#000;font-weight:800;font-size:13px;
+  padding:10px 24px;border-radius:100px;text-decoration:none;
+  animation:pulseGreen 2.5s infinite;transition:transform .2s;
+  white-space:nowrap;
+}
+.nav-btn:hover{transform:scale(1.05)}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%,rgba(0,229,160,.08) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 35% at 80% 80%,rgba(91,200,255,.04) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.013) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.013) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.3);
+  border-radius:100px;padding:8px 20px;margin-bottom:32px;
+  font-size:11px;font-weight:700;color:var(--verde);
+  letter-spacing:2px;text-transform:uppercase;
+  position:relative;z-index:1;
+}
+.hero-badge .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--verde);animation:pulseGreen 1.8s infinite;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(50px,9vw,108px);line-height:.95;
+  color:#fff;margin-bottom:8px;
+  position:relative;z-index:1;letter-spacing:2px;
+}
+.hero h1 .g{
+  color:var(--verde);display:block;
+  background:linear-gradient(90deg,var(--verde),#00FFD1,var(--verde));
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation:shimmer 3s linear infinite;
+}
+.hero-sub{
+  font-size:clamp(16px,2.4vw,21px);color:var(--suave);
+  max-width:580px;margin:22px auto 0;font-weight:300;
+  line-height:1.6;position:relative;z-index:1;
+}
+.hero-sub strong{color:var(--texto);font-weight:600}
+
+/* prova social */
+.sproof{
+  display:flex;align-items:center;justify-content:center;
+  gap:22px;margin-top:38px;flex-wrap:wrap;
+  position:relative;z-index:1;
+}
+.sp-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--suave)}
+.sp-item .ico{color:var(--amarelo);font-size:14px}
+.sp-item strong{color:var(--texto)}
+.sp-sep{color:#2a2a2a;font-size:18px}
+
+/* mockup */
+.mockup-wrap{
+  position:relative;z-index:1;margin-top:52px;
+  animation:float 4s ease-in-out infinite;
+}
+.mockup{
+  background:var(--c2);border:1px solid #2a2a2a;
+  border-radius:18px;padding:26px 30px;
+  max-width:510px;margin:0 auto;text-align:left;
+  box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 1px #222;
+}
+.mock-bar{display:flex;gap:6px;margin-bottom:18px}
+.mock-bar span{width:10px;height:10px;border-radius:50%}
+.r{background:#FF5F57}.y{background:#FEBC2E}.g{background:#28C840}
+.mock-line{
+  font-size:12px;color:var(--suave);margin-bottom:10px;
+  padding:8px 12px;background:var(--c3);border-radius:8px;
+  border-left:3px solid var(--verde);
+}
+.mock-line .lbl{color:var(--verde);font-weight:700;font-size:10px;display:block;margin-bottom:3px}
+.mock-line .ptxt{color:var(--azul)}
+
+/* CTAs */
+.cta-btn{
+  display:inline-block;background:var(--verde);color:#000;
+  font-weight:800;font-size:17px;padding:20px 52px;
+  border-radius:100px;text-decoration:none;letter-spacing:.3px;
+  transition:transform .2s,box-shadow .2s;
+  animation:pulseGreen 2.5s infinite;
+  position:relative;z-index:1;
+}
+.cta-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 20px 40px rgba(0,229,160,.25)}
+.cta-btn.am{background:var(--amarelo);animation:none}
+.cta-btn.am:hover{box-shadow:0 20px 40px rgba(255,217,74,.25)}
+.cta-sub{font-size:12px;color:var(--suave);margin-top:13px}
+
+/* ══════════════════════════════════════
+   SEÇÕES GENÉRICAS
+══════════════════════════════════════ */
+.s{max-width:900px;margin:0 auto;padding:96px 24px}
+.slbl{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--verde);margin-bottom:14px}
+.s h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(34px,6vw,62px);line-height:1;
+  color:#fff;letter-spacing:1px;margin-bottom:18px;
+}
+.s h2 span{color:var(--verde)}
+.s p{font-size:16px;color:var(--suave);font-weight:300;max-width:640px}
+.s p strong{color:var(--texto);font-weight:600}
+hr.div{border:none;border-top:1px solid #181818}
+
+/* ══════════════════════════════════════
+   GRID DOR
+══════════════════════════════════════ */
+.dor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:38px}
+.dor-card{
+  background:var(--c2);border:1px solid #222;border-radius:16px;
+  padding:22px;display:flex;gap:14px;align-items:flex-start;
+  transition:border-color .2s;
+}
+.dor-card:hover{border-color:#333}
+.dor-ico{font-size:24px;flex-shrink:0;margin-top:2px}
+.dor-ttl{font-weight:700;font-size:14px;color:#fff;margin-bottom:5px}
+.dor-dsc{font-size:13px;color:var(--suave);line-height:1.55}
+
+/* destaque citação */
+.quote-box{
+  background:rgba(0,229,160,.06);border:1px solid rgba(0,229,160,.2);
+  border-radius:16px;padding:28px 32px;max-width:620px;margin-top:44px;
+}
+.quote-box p{font-size:18px;color:#fff;font-weight:600;line-height:1.55;margin:0}
+.quote-box small{font-size:13px;color:var(--suave);margin-top:10px;display:block}
+
+/* ══════════════════════════════════════
+   O QUE VOCÊ RECEBE
+══════════════════════════════════════ */
+.ent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px;margin-top:44px}
+.ent-card{
+  background:var(--c2);border:1px solid #222;border-radius:18px;
+  padding:26px 22px;position:relative;overflow:hidden;
+  transition:transform .2s,border-color .2s;
+}
+.ent-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--verde);border-radius:18px 18px 0 0;
+}
+.ent-card:hover{transform:translateY(-4px);border-color:#2a2a2a}
+.ent-num{
+  font-family:'Bebas Neue',sans-serif;font-size:46px;
+  color:rgba(0,229,160,.1);line-height:1;margin-bottom:6px;
+}
+.ent-ttl{font-weight:700;font-size:15px;color:#fff;margin-bottom:7px}
+.ent-dsc{font-size:13px;color:var(--suave);line-height:1.6}
+
+/* ══════════════════════════════════════
+   PROMPTS PREVIEW
+══════════════════════════════════════ */
+.pp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:10px;margin-top:36px}
+.pp{
+  background:var(--c2);border:1px solid #222;border-radius:11px;
+  padding:13px 15px;font-size:12px;color:var(--suave);
+  display:flex;align-items:flex-start;gap:9px;
+  transition:border-color .2s,background .2s,color .2s;
+}
+.pp:hover{border-color:rgba(0,229,160,.3);background:rgba(0,229,160,.04);color:var(--texto)}
+.pp .n{
+  background:rgba(0,229,160,.15);color:var(--verde);font-weight:800;
+  font-size:10px;padding:2px 6px;border-radius:5px;flex-shrink:0;margin-top:1px;
+}
+
+/* ══════════════════════════════════════
+   DEPOIMENTOS
+══════════════════════════════════════ */
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;margin-top:44px}
+.dep-card{background:var(--c2);border:1px solid #222;border-radius:18px;padding:26px 22px}
+.dep-q{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--verde);line-height:1;margin-bottom:10px}
+.dep-txt{font-size:14px;color:var(--suave);line-height:1.65;margin-bottom:18px;font-style:italic}
+.dep-txt strong{color:var(--verde);font-style:normal}
+.dep-autor{display:flex;align-items:center;gap:11px}
+.dep-av{width:38px;height:38px;border-radius:50%;background:var(--c3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;border:2px solid #2a2a2a}
+.dep-nome{font-weight:700;font-size:13px;color:#fff}
+.dep-cargo{font-size:11px;color:var(--suave)}
+.stars{color:var(--amarelo);font-size:12px;margin-bottom:3px}
+
+/* ══════════════════════════════════════
+   SIM / NÃO
+══════════════════════════════════════ */
+.sn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+.sn{border-radius:16px;padding:26px}
+.sn.sim{background:rgba(0,229,160,.06);border:1px solid rgba(0,229,160,.2)}
+.sn.nao{background:rgba(255,78,78,.05);border:1px solid rgba(255,78,78,.15)}
+.sn-ttl{font-weight:800;font-size:15px;margin-bottom:14px}
+.sn.sim .sn-ttl{color:var(--verde)}
+.sn.nao .sn-ttl{color:var(--vermelho)}
+.sn-item{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--suave);margin-bottom:9px}
+
+/* ══════════════════════════════════════
+   GARANTIA
+══════════════════════════════════════ */
+.garantia{
+  background:var(--c2);border:1px solid #222;border-radius:22px;
+  padding:44px;display:flex;gap:32px;align-items:center;margin-top:54px;
+}
+.garantia-ico{font-size:76px;flex-shrink:0;animation:float 4s ease-in-out infinite}
+.garantia h3{
+  font-family:'Bebas Neue',sans-serif;font-size:34px;
+  letter-spacing:1px;color:#fff;margin-bottom:10px;
+}
+.garantia p{font-size:14px;color:var(--suave);line-height:1.65;max-width:460px}
+.garantia p strong{color:#fff}
+
+/* ══════════════════════════════════════
+   PREÇO
+══════════════════════════════════════ */
+.preco-box{
+  background:var(--c2);border:1px solid #2a2a2a;border-radius:22px;
+  overflow:hidden;max-width:500px;margin:0 auto;
+  box-shadow:0 40px 80px rgba(0,0,0,.4);
+}
+.preco-hdr{
+  background:linear-gradient(135deg,#0F2A1E,#0A1A14);
+  border-bottom:1px solid rgba(0,229,160,.15);
+  padding:26px 34px;text-align:center;
+}
+.preco-tag{
+  display:inline-block;background:rgba(0,229,160,.15);
+  border:1px solid rgba(0,229,160,.3);color:var(--verde);
+  font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:5px 14px;border-radius:100px;margin-bottom:14px;
+}
+.preco-titulo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:#fff}
+.preco-body{padding:34px}
+.preco-de{font-size:13px;color:var(--suave);text-decoration:line-through;margin-bottom:3px}
+.preco-por{display:flex;align-items:flex-end;gap:4px;margin-bottom:5px}
+.p-cifrao{font-size:22px;font-weight:700;color:var(--verde);margin-bottom:9px}
+.p-val{font-family:'Bebas Neue',sans-serif;font-size:76px;color:var(--verde);line-height:1;letter-spacing:1px}
+.p-cents{font-size:26px;font-weight:700;color:var(--verde);margin-bottom:12px}
+.preco-aviso{font-size:12px;color:var(--suave);margin-bottom:26px}
+.preco-lista{list-style:none;margin-bottom:30px}
+.preco-lista li{
+  display:flex;align-items:center;gap:9px;font-size:13px;
+  color:var(--suave);padding:9px 0;border-bottom:1px solid #1e1e1e;
+}
+.preco-lista li:last-child{border-bottom:none}
+.preco-lista li .ck{color:var(--verde);font-size:15px}
+.preco-seg{
+  display:flex;align-items:center;justify-content:center;
+  gap:14px;margin-top:18px;flex-wrap:wrap;
+}
+.seg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--suave)}
+
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.faq-item{border-bottom:1px solid #1a1a1a;padding:22px 0}
+.faq-q{
+  font-weight:700;font-size:15px;color:#fff;margin-bottom:9px;
+  display:flex;align-items:flex-start;gap:11px;cursor:pointer;
+}
+.faq-q::before{
+  content:'?';background:rgba(0,229,160,.12);color:var(--verde);
+  width:22px;height:22px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;margin-top:2px;
+}
+.faq-a{font-size:14px;color:var(--suave);line-height:1.65;padding-left:33px}
+.faq-a strong{color:var(--texto)}
+
+/* ══════════════════════════════════════
+   STICKY MOBILE
+══════════════════════════════════════ */
+.sticky{
+  display:none;position:fixed;bottom:0;left:0;right:0;
+  background:var(--c1);border-top:1px solid #222;
+  padding:14px 18px;z-index:200;
+  align-items:center;justify-content:space-between;gap:14px;
+}
+.sticky-preco{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--verde);letter-spacing:1px}
+.sticky-preco small{font-family:'Manrope',sans-serif;font-size:11px;color:var(--suave);display:block;font-weight:400}
+.sticky-btn{
+  background:var(--verde);color:#000;font-weight:800;font-size:13px;
+  padding:12px 24px;border-radius:100px;text-decoration:none;
+  white-space:nowrap;flex-shrink:0;animation:pulseGreen 2.5s infinite;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer{
+  background:var(--c1);border-top:1px solid #181818;
+  padding:38px 24px;text-align:center;
+}
+footer .flogo{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;color:#fff;margin-bottom:10px}
+footer .flogo span{color:var(--verde)}
+footer p{font-size:12px;color:#444;max-width:480px;margin:0 auto 6px}
+
+/* ══════════════════════════════════════
+   RESPONSIVO
+══════════════════════════════════════ */
+@media(max-width:768px){
+  nav{padding:13px 18px}
+  .hero{padding:56px 18px}
+  .s{padding:66px 18px}
+  .sn-grid{grid-template-columns:1fr}
+  .garantia{flex-direction:column;text-align:center;padding:28px 20px}
+  .garantia-ico{font-size:54px}
+  .sticky{display:flex}
+  body{padding-bottom:85px}
+  .p-val{font-size:58px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ TICKER ══════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>50 Prompts Prontos para Usar Hoje</span>
+    <span>Funciona com ChatGPT, Claude e Gemini</span>
+    <span>Sem precisar saber nada de tecnologia</span>
+    <span>Acesso Imediato após o pagamento</span>
+    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+    <span>50 Prompts Prontos para Usar Hoje</span>
+    <span>Funciona com ChatGPT, Claude e Gemini</span>
+    <span>Sem precisar saber nada de tecnologia</span>
+    <span>Acesso Imediato após o pagamento</span>
+    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+  </div>
+</div>
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav>
+  <div class="logo">Prompt<span>Certo</span></div>
+  <!-- 🔗 SUBSTITUA O LINK ABAIXO PELO SEU LINK DA KIWIFY -->
+  <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="nav-btn" target="_blank" rel="noopener">Quero Agora →</a>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge fu d1"><span class="dot"></span> E-BOOK DIGITAL · ACESSO IMEDIATO</div>
+
+  <h1 class="fu d2">
+    PARE DE<br>PERDER TEMPO<br>
+    <span class="g">COM IA ERRADA</span>
+  </h1>
+
+  <p class="hero-sub fu d3">
+    Descubra os <strong>50 prompts exatos</strong> que profissionais usam para economizar horas por semana — sem precisar saber nada de tecnologia.
+  </p>
+
+  <div class="sproof fu d4">
+    <div class="sp-item"><span class="ico">★★★★★</span> <strong>4.9/5</strong> avaliação</div>
+    <span class="sp-sep">·</span>
+    <div class="sp-item"><span class="ico">👥</span> <strong>+1.200</strong> alunos</div>
+    <span class="sp-sep">·</span>
+    <div class="sp-item"><span class="ico">⚡</span> Acesso <strong>imediato</strong></div>
+  </div>
+
+  <div class="mockup-wrap fu d5">
+    <div class="mockup">
+      <div class="mock-bar"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+      <div class="mock-line">
+        <span class="lbl">PROMPT #05 — PRODUTIVIDADE</span>
+        <span class="ptxt">Crie um plano de ação semanal com minhas tarefas [LISTA], priorizadas por urgência e distribuídas em blocos de foco...</span>
+      </div>
+      <div class="mock-line">
+        <span class="lbl">PROMPT #13 — FINANÇAS</span>
+        <span class="ptxt">Crie um roteiro de ligação para negociar minha dívida de R$[X] com [BANCO], obtendo desconto mínimo de [Y]%...</span>
+      </div>
+      <div class="mock-line">
+        <span class="lbl">PROMPT #32 — REDES SOCIAIS</span>
+        <span class="ptxt">Escreva uma legenda para Instagram com gancho que pare o scroll, máx. 150 palavras, CTA para [AÇÃO]...</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:50px;position:relative;z-index:1" class="fu d5">
+    <!-- 🔗 SUBSTITUA O LINK ABAIXO PELO SEU LINK DA KIWIFY -->
+    <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="cta-btn" target="_blank" rel="noopener">✦ QUERO MEU E-BOOK AGORA</a>
+    <p class="cta-sub">🔒 Pagamento seguro via Kiwify · Acesso em menos de 1 minuto</p>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ DOR ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ O Problema</div>
+  <h2>VOCÊ JÁ PASSOU<br>POR <span>ISSO?</span></h2>
+  <p>A maioria das pessoas usa a IA do jeito errado — e fica frustrada quando ela não entrega o que espera.</p>
+
+  <div class="dor-grid">
+    <div class="dor-card"><div class="dor-ico">😤</div><div><div class="dor-ttl">Respostas genéricas e inúteis</div><div class="dor-dsc">Você pergunta algo e a IA te dá uma resposta sem nenhuma utilidade prática — como se fosse para qualquer pessoa do mundo.</div></div></div>
+    <div class="dor-card"><div class="dor-ico">⏳</div><div><div class="dor-ttl">Tempo perdido tentando e errando</div><div class="dor-dsc">Você fica reformulando o mesmo pedido várias vezes sem entender por que o resultado sempre fica aquém do esperado.</div></div></div>
+    <div class="dor-card"><div class="dor-ico">😕</div><div><div class="dor-ttl">Sensação de que IA não é pra você</div><div class="dor-dsc">Você vê outros falando que IA salvou suas vidas, mas na sua experiência nunca funcionou direito.</div></div></div>
+    <div class="dor-card"><div class="dor-ico">💸</div><div><div class="dor-ttl">Pagando sem usar bem</div><div class="dor-dsc">Assinou o ChatGPT Plus ou outra ferramenta paga e não consegue extrair nem metade do que ela é capaz de entregar.</div></div></div>
+  </div>
+
+  <div class="quote-box">
+    <p>"O problema nunca foi a IA.<br>O problema foi o <span style="color:var(--verde)">prompt</span>."</p>
+    <small>— E este e-book resolve isso de uma vez por todas.</small>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ O QUE VOCÊ RECEBE ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ O que está incluso</div>
+  <h2>TUDO QUE VOCÊ<br><span>RECEBE</span> HOJE</h2>
+  <p>Um e-book completo, direto ao ponto, com prompts prontos para copiar e colar — com resultados reais imediatos.</p>
+
+  <div class="ent-grid">
+    <div class="ent-card"><div class="ent-num">50</div><div class="ent-ttl">Prompts Prontos para Copiar</div><div class="ent-dsc">Cada prompt foi testado e refinado. É só adaptar com suas informações e usar agora.</div></div>
+    <div class="ent-card"><div class="ent-num">05</div><div class="ent-ttl">Blocos Temáticos</div><div class="ent-dsc">Trabalho, Finanças, Estudos, Redes Sociais e Vida Pessoal — organizado para achar rápido.</div></div>
+    <div class="ent-card"><div class="ent-num">∞</div><div class="ent-ttl">Exemplos de Resultado</div><div class="ent-dsc">Cada prompt mostra o que esperar — sem mistério, sem surpresa antes de usar.</div></div>
+    <div class="ent-card"><div class="ent-num">01</div><div class="ent-ttl">Capítulo Educativo</div><div class="ent-dsc">O que é um prompt, por que a maioria erra e a fórmula para ter respostas de qualidade.</div></div>
+    <div class="ent-card"><div class="ent-num">3x</div><div class="ent-ttl">Compatível com 3 ferramentas</div><div class="ent-dsc">Todos os prompts funcionam com ChatGPT, Claude e Gemini — todos gratuitos.</div></div>
+    <div class="ent-card"><div class="ent-num">⚡</div><div class="ent-ttl">Acesso Imediato em PDF</div><div class="ent-dsc">Entregue na hora no e-mail. Leia no celular, tablet ou computador.</div></div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ PROMPTS PREVIEW ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ Prévia do conteúdo</div>
+  <h2>ALGUNS DOS<br><span>50 PROMPTS</span></h2>
+  <p>Uma amostra do que você vai encontrar dentro do e-book — pronto para usar.</p>
+
+  <div class="pp-grid">
+    <div class="pp"><span class="n">01</span> Resumir reuniões longas em bullet points</div>
+    <div class="pp"><span class="n">02</span> Responder e-mails difíceis com diplomacia</div>
+    <div class="pp"><span class="n">03</span> Criar apresentação de slides completa</div>
+    <div class="pp"><span class="n">04</span> Escrever proposta comercial persuasiva</div>
+    <div class="pp"><span class="n">11</span> Criar orçamento mensal personalizado</div>
+    <div class="pp"><span class="n">12</span> Plano para sair das dívidas em X meses</div>
+    <div class="pp"><span class="n">13</span> Roteiro para negociar dívidas por telefone</div>
+    <div class="pp"><span class="n">21</span> Resumir qualquer livro em 10 pontos-chave</div>
+    <div class="pp"><span class="n">22</span> Explicar conceito difícil de forma simples</div>
+    <div class="pp"><span class="n">31</span> Gerar 30 ideias de posts para Instagram</div>
+    <div class="pp"><span class="n">32</span> Escrever legenda viral com CTA poderoso</div>
+    <div class="pp"><span class="n">33</span> Roteiro de vídeo para Reels e TikTok</div>
+    <div class="pp"><span class="n">41</span> Cardápio semanal saudável e barato</div>
+    <div class="pp"><span class="n">42</span> Planejar viagem completa com orçamento</div>
+    <div class="pp"><span class="n">43</span> Plano de 90 dias para mudar um hábito</div>
+    <div class="pp"><span class="n">50</span> Carta de metas para o futuro</div>
+  </div>
+  <p style="margin-top:22px;font-size:13px;color:var(--suave)">+ 34 prompts exclusivos apenas dentro do e-book 🔒</p>
+</section>
+
+<hr class="div">
+
+<!-- ══ DEPOIMENTOS ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ Quem já usou</div>
+  <h2>O QUE ESTÃO<br><span>FALANDO</span></h2>
+  <p>Pessoas reais que aplicaram os prompts e transformaram sua rotina com IA.</p>
+
+  <div class="dep-grid">
+    <div class="dep-card">
+      <div class="dep-q">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="dep-txt">Tentei usar o ChatGPT por meses e nunca funcionou. Com o PromptCerto, <strong>em 10 minutos já tinha meu orçamento mensal completo.</strong> Simples assim.</div>
+      <div class="dep-autor"><div class="dep-av">👩</div><div><div class="dep-nome">Camila R.</div><div class="dep-cargo">Professora, São Paulo</div></div></div>
+    </div>
+    <div class="dep-card">
+      <div class="dep-q">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="dep-txt">Usei o prompt de proposta comercial e fechei um contrato no mesmo dia. <strong>O cliente achou que eu tinha contratado um redator profissional.</strong></div>
+      <div class="dep-autor"><div class="dep-av">👨</div><div><div class="dep-nome">Rafael M.</div><div class="dep-cargo">Freelancer, Belo Horizonte</div></div></div>
+    </div>
+    <div class="dep-card">
+      <div class="dep-q">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="dep-txt">Nunca fui de tecnologia, mas o PromptCerto é tão simples que <strong>minha mãe de 58 anos montou o cardápio da semana em 2 minutos.</strong></div>
+      <div class="dep-autor"><div class="dep-av">👩</div><div><div class="dep-nome">Juliana F.</div><div class="dep-cargo">Nutricionista, Curitiba</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ PARA QUEM É ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ Fit</div>
+  <h2>ESSE E-BOOK É<br><span>PARA VOCÊ?</span></h2>
+
+  <div class="sn-grid">
+    <div class="sn sim">
+      <div class="sn-ttl">✅ SIM, é pra você se...</div>
+      <div class="sn-item"><span>✓</span> Quer economizar tempo no trabalho e na vida pessoal</div>
+      <div class="sn-item"><span>✓</span> Já tentou usar IA mas os resultados foram frustrantes</div>
+      <div class="sn-item"><span>✓</span> Não tem tempo para cursos longos — quer resultados rápidos</div>
+      <div class="sn-item"><span>✓</span> Quer usar ChatGPT, Claude ou Gemini do jeito certo</div>
+      <div class="sn-item"><span>✓</span> Quer criar conteúdo para redes sociais com mais agilidade</div>
+    </div>
+    <div class="sn nao">
+      <div class="sn-ttl">❌ NÃO é pra você se...</div>
+      <div class="sn-item"><span>✗</span> Já é especialista em engenharia de prompts avançada</div>
+      <div class="sn-item"><span>✗</span> Quer aprender programação ou desenvolvimento de IA</div>
+      <div class="sn-item"><span>✗</span> Está buscando conteúdo técnico e acadêmico</div>
+      <div class="sn-item"><span>✗</span> Não tem acesso a nenhuma ferramenta de IA gratuita</div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ GARANTIA ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ Sem risco</div>
+  <h2>GARANTIA<br><span>TOTAL</span></h2>
+  <div class="garantia">
+    <div class="garantia-ico">🛡️</div>
+    <div>
+      <h3>7 DIAS DE GARANTIA INCONDICIONAL</h3>
+      <p>Se por qualquer motivo você não ficar satisfeito nos primeiros <strong>7 dias</strong> após a compra, basta entrar em contato e devolvemos <strong>100% do seu dinheiro</strong>. Sem perguntas, sem burocracia. O risco é zero — todo nosso.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ══ PREÇO ══════════════════════════════════════ -->
+<section class="s" id="preco" style="text-align:center">
+  <div class="slbl">✦ Oferta de lançamento</div>
+  <h2 style="margin:0 auto 14px">GARANTA<br><span>SEU ACESSO</span></h2>
+  <p style="margin:0 auto 44px">Preço de lançamento por tempo limitado. Não perca.</p>
+
+  <div class="preco-box">
+    <div class="preco-hdr">
+      <div class="preco-tag">🔥 OFERTA ESPECIAL DE LANÇAMENTO</div>
+      <div class="preco-titulo">E-BOOK PROMPTCERTO COMPLETO</div>
+    </div>
+    <div class="preco-body">
+      <div class="preco-de">De R$ 97,00</div>
+      <div class="preco-por">
+        <span class="p-cifrao">R$</span>
+        <span class="p-val">27</span>
+        <span class="p-cents">,00</span>
+      </div>
+      <div class="preco-aviso">⚡ Pagamento único · Sem mensalidade · Acesso para sempre</div>
+
+      <ul class="preco-lista">
+        <li><span class="ck">✓</span> 50 Prompts Prontos para Usar Hoje</li>
+        <li><span class="ck">✓</span> 5 Blocos Temáticos completos</li>
+        <li><span class="ck">✓</span> Capítulo educativo sobre Prompts</li>
+        <li><span class="ck">✓</span> Funciona com ChatGPT, Claude e Gemini</li>
+        <li><span class="ck">✓</span> Acesso imediato em PDF</li>
+        <li><span class="ck">✓</span> Garantia de 7 dias ou dinheiro de volta</li>
+      </ul>
+
+      <!-- 🔗 SUBSTITUA O LINK ABAIXO PELO SEU LINK DA KIWIFY -->
+      <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="cta-btn am" style="width:100%;text-align:center;display:block;font-size:17px;padding:20px" target="_blank" rel="noopener">
+        ✦ COMPRAR AGORA POR R$ 27
+      </a>
+
+      <div class="preco-seg">
+        <div class="seg-item">🔒 Pagamento Seguro</div>
+        <div class="seg-item">⚡ Acesso Imediato</div>
+        <div class="seg-item">🛡️ Garantia 7 Dias</div>
+        <div class="seg-item">💳 Cartão, Pix ou Boleto</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:20px;font-size:12px;color:var(--suave)">
+    Processado com segurança pela <strong style="color:var(--texto)">Kiwify</strong> — maior plataforma de infoprodutos do Brasil.
+  </p>
+</section>
+
+<hr class="div">
+
+<!-- ══ FAQ ══════════════════════════════════════ -->
+<section class="s">
+  <div class="slbl">✦ Dúvidas frequentes</div>
+  <h2>PERGUNTAS<br><span>FREQUENTES</span></h2>
+
+  <div style="margin-top:36px">
+    <div class="faq-item">
+      <div class="faq-q">Preciso saber algo sobre tecnologia para usar?</div>
+      <div class="faq-a">Não. O e-book foi criado para quem nunca usou IA antes. Você só precisa de acesso ao ChatGPT, Claude ou Gemini — todos gratuitos — e saber copiar e colar texto.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Os prompts funcionam no ChatGPT gratuito?</div>
+      <div class="faq-a"><strong>Sim! Todos os 50 prompts foram testados na versão gratuita</strong> do ChatGPT, Claude e Gemini. Você não precisa assinar nenhum plano pago para ter resultados.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Como vou receber o e-book após a compra?</div>
+      <div class="faq-a">Imediatamente após o pagamento confirmado, você receberá um <strong>e-mail com o link de download</strong> do PDF. O acesso é instantâneo — em menos de 1 minuto você já está lendo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">A garantia de 7 dias funciona de verdade?</div>
+      <div class="faq-a">Sim. Se por qualquer motivo você não ficar satisfeito, basta enviar um e-mail em até 7 dias e devolvemos <strong>100% do valor pago</strong>, sem perguntas e sem burocracia. A garantia é processada pela Kiwify.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Posso usar em celular ou tablet?</div>
+      <div class="faq-a">Sim! O e-book é entregue em PDF e funciona perfeitamente em qualquer dispositivo — celular, tablet, computador ou e-reader.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Esse preço de R$ 27 é por quanto tempo?</div>
+      <div class="faq-a">É um preço de lançamento por tempo limitado. Assim que atingirmos o número de vendas previsto para o lançamento, o preço voltará para R$ 97. <strong>Aproveite enquanto está assim.</strong></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:60px">
+    <!-- 🔗 SUBSTITUA O LINK ABAIXO PELO SEU LINK DA KIWIFY -->
+    <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="cta-btn" target="_blank" rel="noopener">✦ QUERO MEU E-BOOK — R$ 27</a>
+    <p class="cta-sub" style="margin-top:13px">🛡️ Garantia de 7 dias · Acesso imediato · Pagamento seguro</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════ -->
+<footer>
+  <div class="flogo">Prompt<span>Certo</span></div>
+  <p>Este produto é vendido pela plataforma Kiwify. Ao comprar, você concorda com os termos de uso e política de privacidade.</p>
+  <p style="margin-top:5px">© 2025 PromptCerto · Todos os direitos reservados</p>
+  <p style="margin-top:16px;font-size:11px;color:#333">Os resultados descritos são baseados em experiências individuais e podem variar de acordo com o esforço e contexto de cada pessoa.</p>
+</footer>
+
+<!-- ══ STICKY MOBILE ══════════════════════════════════════ -->
+<div class="sticky">
+  <div>
+    <small class="sticky-preco" style="font-family:'Manrope';font-size:11px;color:var(--suave)">Apenas</small>
+    <div class="sticky-preco">R$ 27</div>
+  </div>
+  <!-- 🔗 SUBSTITUA O LINK ABAIXO PELO SEU LINK DA KIWIFY -->
+  <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="sticky-btn" target="_blank" rel="noopener">COMPRAR AGORA →</a>
+</div>
+
+<!-- ══ SCROLL ANIMATION ══════════════════════════════════════ -->
+<script>
+// Intersection Observer para animar elementos ao rolar
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.dor-card,.ent-card,.dep-card,.pp').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  obs.observe(el);
+});
+</script>
+
+</body>
+</html>
